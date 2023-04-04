@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <title>World Cup</title>
+  </head>
+  <body>
+    <div
+      class="bg-gradient-to-tr from-blue-100 to-cyan-300 container flex justify-center mx-auto p-6 w-11/12"
+    >
+      <h1 class="text-3xl">World Cup Countries</h1>
+    </div>
+
+    <div
+      style="
+        background-image: url(img/wc.jpg);
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+      "
+      class="container mx-auto w-11/12 bg-blue-50 flex flex-col justify-center rounded-lg bg-gradient-to-r from-blue-100 to to-teal-200"
+    >
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/FRA.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card1">France</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/BRA.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card2">Brazil</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/GER.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card3">Germany</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/CRO.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card4">Croatia</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/MOR.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card5">Mororco</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/JPN.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card6">Japan</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/KOR.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card7">South Korea</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/ARG.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card8">Argentina</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/KSA.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card9">Saudi Arabia</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/QAT.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card10">Qatar</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg -transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/POL.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card11">Poland</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/POR.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card12">Portugal</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/SWI.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card13">Switherland</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/GHA.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card14">Ghana</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/SEN.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card15">Senegal</h1>
+      </div>
+
+      <div class="p-6 mx-3 my-2 bg-transparent flex flex-row justify-start">
+        <div
+          style="
+            background-image: url(img/DUT.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="px-10 py-7 rounded-lg"
+        ></div>
+        <h1 class="text-xl text-white my-auto mx-3" id="card16">Netherlands</h1>
+      </div>
+    </div>
+
+    <div class="container mx-auto flex justify-center my-12 w-1/2">
+      <button
+        onclick="randomAllocate()"
+        class="hover:animate-pulse backdrop-blur-lg bg-gradient-to-r from-teal-300 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-md px-4 py-4 text-white font-semibold w-40"
+      >
+        Submit
+      </button>
+    </div>
+
+    <div class="flex flex-col lg:flex-row">
+      <!-- Group Stage  1-->
+
+      <div
+        class="transition ease-in-out hover:-translate-y-2 container mx-auto flex flex-col bg-gradient-to-tr from-blue-100 mb-24 p-10 rounded-lg text-slate-900"
+      >
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group1">Team 1</h1>
+          <input
+            type="number"
+            class="bg-blue-100 outline-none m-4 w-1/6 rounded-md"
+            id="value1"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group2">Team 2</h1>
+          <input
+            type="number"
+            class="bg-blue-100 outline-none m-4 w-1/6 rounded-lg"
+            id="value2"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group3">Team 3</h1>
+          <input
+            type="number"
+            class="bg-blue-100 outline-none m-4 w-1/6 rounded-lg"
+            id="value3"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group4">Team 4</h1>
+          <input
+            type="number"
+            class="bg-blue-100 outline-none m-4 w-1/6 rounded-lg"
+            id="value4"
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <a href="#displayText">
+            <button
+              onclick="displayData()"
+              class="hover:animate-pulse text-center font-semibold p-4 rounded-md bg-gradient-to-tr from-red-400 to-blue-500 text-white"
+            >
+              Show Stats
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Group Stage 2 -->
+
+      <div
+        class="transition hover:-translate-y-2 ease-in-out container mx-auto flex flex-col mb-24 p-10 rounded-lg bg-gradient-to-tr from-blue-100"
+      >
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group5">Team 5</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg"
+            id="value5"
+            required
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group6">Team 6</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg"
+            id="value6"
+            required
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group7">Team 7</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg"
+            id="value7"
+            required
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group8">Team 8</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg"
+            id="value8"
+            required
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <a href="#displayText">
+            <button
+              onclick="displayData2()"
+              class="hover:animate-pulse text-center font-semibold p-4 rounded-md bg-gradient-to-tr from-red-400 to-blue-500 text-white"
+            >
+              Show Stats
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Group Stage 3 -->
+
+      <div
+        class="transition ease-in-out hover:-translate-y-2 container mx-auto flex flex-col bg-gradient-to-tr from-blue-100 mb-24 p-10 rounded-lg text-slate-900"
+      >
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group9">Team 9</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg"
+            id="value9"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group10">Team 10</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg"
+            id="value10"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group11">Team 11</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg"
+            id="value11"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group12">Team 12</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg"
+            id="value12"
+          />
+        </div>
+        <div class="flex flex-col">
+          <a href="#displayText">
+            <button
+              onclick="displayData3()"
+              class="hover:animate-pulse text-center font-semibold p-4 rounded-md bg-gradient-to-tr from-red-400 to-blue-500 text-white"
+            >
+              Show Stats
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Group Stage 4 -->
+
+      <div
+        class="transition ease-in-out hover:-translate-y-2 container mx-auto flex flex-col bg-gradient-to-tr from-blue-100 mb-24 p-10 rounded-lg text-slate-900"
+      >
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group13">Team 13</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg outline-none"
+            required
+            id="value13"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group14">Team 14</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg outline-none"
+            required
+            id="value14"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group15">Team 15</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg outline-none"
+            required
+            id="value15"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <h1 class="text-xl my-auto" id="group16">Team 16</h1>
+          <input
+            type="number"
+            class="bg-blue-100 m-4 w-1/6 rounded-lg outline-none"
+            required
+            id="value16"
+          />
+        </div>
+        <div class="flex flex-col">
+          <a href="#displayText">
+            <button
+              class="hover:animate-pulse text-center font-semibold p-4 rounded-md bg-gradient-to-tr from-red-400 to-blue-500 text-white"
+              onclick="displayData4()"
+            >
+              Show Stats
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container flex flex-col md:flex-row justify-between">
+      <div class="rounded-lg">
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+      </div>
+      <div class="">
+        <figure class="highcharts-figure">
+          <div id="container2"></div>
+        </figure>
+      </div>
+    </div>
+
+    <h1 class="text-2xl" id="displayText"></h1>
+
+    <script src="script.js"></script>
+  </body>
+</html>
